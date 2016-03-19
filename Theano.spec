@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 0.8.0rc1
-Release  : 1
+Release  : 2
 URL      : https://pypi.python.org/packages/source/T/Theano/Theano-0.8.0rc1.tar.gz
 Source0  : https://pypi.python.org/packages/source/T/Theano/Theano-0.8.0rc1.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
@@ -12,11 +12,15 @@ Group    : Development/Tools
 License  : BSD-3-Clause-Clear
 Requires: Theano-bin
 Requires: Theano-python
+BuildRequires : Sphinx
+BuildRequires : nose
+BuildRequires : numpy
 BuildRequires : openblas
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
+BuildRequires : scipy
 BuildRequires : setuptools
 
 %description
