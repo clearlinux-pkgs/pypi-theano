@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 0.8.2
-Release  : 4
+Release  : 5
 URL      : https://pypi.python.org/packages/30/3d/2354fac96ca9594b755ec22d91133522a7db0caa0877165a522337d0ed73/Theano-0.8.2.tar.gz
 Source0  : https://pypi.python.org/packages/30/3d/2354fac96ca9594b755ec22d91133522a7db0caa0877165a522337d0ed73/Theano-0.8.2.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
