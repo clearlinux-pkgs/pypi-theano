@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 0.9.0
-Release  : 7
+Release  : 8
 URL      : http://pypi.debian.net/Theano/Theano-0.9.0.tar.gz
 Source0  : http://pypi.debian.net/Theano/Theano-0.9.0.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
