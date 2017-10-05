@@ -4,13 +4,14 @@
 #
 Name     : Theano
 Version  : 0.9.0
-Release  : 11
+Release  : 12
 URL      : http://pypi.debian.net/Theano/Theano-0.9.0.tar.gz
 Source0  : http://pypi.debian.net/Theano/Theano-0.9.0.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
 Group    : Development/Tools
 License  : BSD-3-Clause-Clear
 Requires: Theano-bin
+Requires: Theano-python3
 Requires: Theano-python
 Requires: Sphinx
 Requires: flake8
@@ -51,10 +52,20 @@ bin components for the Theano package.
 %package python
 Summary: python components for the Theano package.
 Group: Default
+Requires: Theano-python3
 Provides: theano-python
 
 %description python
 python components for the Theano package.
+
+
+%package python3
+Summary: python3 components for the Theano package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the Theano package.
 
 
 %prep
@@ -65,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505443336
+export SOURCE_DATE_EPOCH=1507179976
 python3 setup.py build -b py3
 
 %install
@@ -84,5 +95,8 @@ echo ----[ mark ]----
 /usr/bin/theano-nose
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
