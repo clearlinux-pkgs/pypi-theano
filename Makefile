@@ -1,5 +1,5 @@
 PKG_NAME := Theano
-URL = https://pypi.python.org/packages/8d/74/99cc011153b3a566e98729cfee1b8b00af157e2b6047d23ee0871fd5e706/Theano-1.0.0.tar.gz
+URL = https://pypi.python.org/packages/62/da/ab486aae8e538d8ae91fa0e6ab26d3a454d7c5c7a66541f40300e58a3314/Theano-1.0.1.tar.gz
 
 
 include ../common/Makefile.common
