@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 1.0.1
-Release  : 19
+Release  : 20
 URL      : https://pypi.python.org/packages/62/da/ab486aae8e538d8ae91fa0e6ab26d3a454d7c5c7a66541f40300e58a3314/Theano-1.0.1.tar.gz
 Source0  : https://pypi.python.org/packages/62/da/ab486aae8e538d8ae91fa0e6ab26d3a454d7c5c7a66541f40300e58a3314/Theano-1.0.1.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
@@ -13,10 +13,12 @@ License  : BSD-3-Clause-Clear
 Requires: Theano-bin
 Requires: Theano-python3
 Requires: Theano-python
+Requires: Pygments
 Requires: Sphinx
 Requires: flake8
 Requires: nose
 Requires: numpy
+Requires: openmpi
 Requires: scipy
 Requires: six
 BuildRequires : Sphinx
@@ -76,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512737480
+export SOURCE_DATE_EPOCH=1526511259
 python3 setup.py build -b py3
 
 %install
