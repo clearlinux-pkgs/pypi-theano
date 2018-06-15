@@ -32,7 +32,7 @@ BuildRequires : ocl-icd-dev
 BuildRequires : openblas
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : scipy
 BuildRequires : setuptools
