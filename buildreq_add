@@ -7,6 +7,5 @@ nose
 Sphinx
 ocl-icd
 ocl-icd-dev
-beignet-dev
-beignet
+opencl-headers-dev
 graphviz

@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 1.0.4
-Release  : 33
+Release  : 34
 URL      : https://files.pythonhosted.org/packages/7d/c4/6341148ad458b6cd8361b774d7ee6895c38eab88f05331f22304c484ed5d/Theano-1.0.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7d/c4/6341148ad458b6cd8361b774d7ee6895c38eab88f05331f22304c484ed5d/Theano-1.0.4.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
@@ -19,8 +19,6 @@ Requires: openmpi
 Requires: scipy
 Requires: six
 BuildRequires : Sphinx
-BuildRequires : beignet
-BuildRequires : beignet-dev
 BuildRequires : buildreq-distutils3
 BuildRequires : graphviz
 BuildRequires : nose
@@ -28,6 +26,8 @@ BuildRequires : numpy
 BuildRequires : ocl-icd
 BuildRequires : ocl-icd-dev
 BuildRequires : openblas
+BuildRequires : opencl-headers-dev
+BuildRequires : openmpi
 BuildRequires : scipy
 BuildRequires : six
 
@@ -79,12 +79,18 @@ python3 components for the Theano package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1547666218
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1564512645
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Theano
 cp LICENSE.txt %{buildroot}/usr/share/package-licenses/Theano/LICENSE.txt
