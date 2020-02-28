@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 1.0.4
-Release  : 37
+Release  : 38
 URL      : https://files.pythonhosted.org/packages/7d/c4/6341148ad458b6cd8361b774d7ee6895c38eab88f05331f22304c484ed5d/Theano-1.0.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7d/c4/6341148ad458b6cd8361b774d7ee6895c38eab88f05331f22304c484ed5d/Theano-1.0.4.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
@@ -67,6 +67,7 @@ python components for the Theano package.
 Summary: python3 components for the Theano package.
 Group: Default
 Requires: python3-core
+Provides: pypi(Theano)
 
 %description python3
 python3 components for the Theano package.
@@ -74,13 +75,15 @@ python3 components for the Theano package.
 
 %prep
 %setup -q -n Theano-1.0.4
+cd %{_builddir}/Theano-1.0.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564512645
+export SOURCE_DATE_EPOCH=1582910404
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -93,8 +96,8 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Theano
-cp LICENSE.txt %{buildroot}/usr/share/package-licenses/Theano/LICENSE.txt
-cp doc/LICENSE.txt %{buildroot}/usr/share/package-licenses/Theano/doc_LICENSE.txt
+cp %{_builddir}/Theano-1.0.4/LICENSE.txt %{buildroot}/usr/share/package-licenses/Theano/cb55ee0dc57eeb4cfc75424d615d0577a4a71c80
+cp %{_builddir}/Theano-1.0.4/doc/LICENSE.txt %{buildroot}/usr/share/package-licenses/Theano/cb55ee0dc57eeb4cfc75424d615d0577a4a71c80
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -110,8 +113,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/Theano/LICENSE.txt
-/usr/share/package-licenses/Theano/doc_LICENSE.txt
+/usr/share/package-licenses/Theano/cb55ee0dc57eeb4cfc75424d615d0577a4a71c80
 
 %files python
 %defattr(-,root,root,-)
