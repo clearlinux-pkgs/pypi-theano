@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 1.0.4
-Release  : 38
+Release  : 39
 URL      : https://files.pythonhosted.org/packages/7d/c4/6341148ad458b6cd8361b774d7ee6895c38eab88f05331f22304c484ed5d/Theano-1.0.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7d/c4/6341148ad458b6cd8361b774d7ee6895c38eab88f05331f22304c484ed5d/Theano-1.0.4.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
@@ -67,7 +67,10 @@ python components for the Theano package.
 Summary: python3 components for the Theano package.
 Group: Default
 Requires: python3-core
-Provides: pypi(Theano)
+Provides: pypi(theano)
+Requires: pypi(numpy)
+Requires: pypi(scipy)
+Requires: pypi(six)
 
 %description python3
 python3 components for the Theano package.
@@ -82,8 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582910404
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583523854
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
