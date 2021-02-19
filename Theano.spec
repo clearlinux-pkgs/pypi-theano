@@ -4,7 +4,7 @@
 #
 Name     : Theano
 Version  : 1.0.5
-Release  : 45
+Release  : 46
 URL      : https://files.pythonhosted.org/packages/6b/97/bcd5654ba60f35f180931afabbd3b4c46c0379852f961c7a2819ff897f5d/Theano-1.0.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6b/97/bcd5654ba60f35f180931afabbd3b4c46c0379852f961c7a2819ff897f5d/Theano-1.0.5.tar.gz
 Summary  : Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.
