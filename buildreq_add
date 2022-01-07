@@ -1,11 +1,2 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-openblas
-numpy
-scipy
-nose
-Sphinx
-ocl-icd
-ocl-icd-dev
-opencl-headers-dev
-graphviz

@@ -1,0 +1,7 @@
+1.0.5
+pypi(cython)
+pypi(nose)
+pypi(parameterized)
+pypi(reindent)
+pypi(requests)
+pypi(sympy)
